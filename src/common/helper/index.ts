@@ -1,0 +1,1 @@
+// Define logic for helper function - that's relating to business logic at there
