@@ -14,9 +14,7 @@ import { EnvKeyConstant } from 'src/common/constants';
               username: configService.get(EnvKeyConstant.POSTGRES_USER),
               password: configService.get(EnvKeyConstant.POSTGRES_PASSWORD),
               database: configService.get(EnvKeyConstant.POSTGRES_DB),
-              entities: [
-                __dirname + '/../**/*.entity.ts',
-              ],
+              autoLoadEntities: true,
               synchronize: true,
             })
           }),

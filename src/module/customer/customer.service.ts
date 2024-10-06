@@ -12,8 +12,13 @@ export class CustomerService {
     private readonly customerRepository: Repository<Customer>,
   ) {}
 
-  create(createCustomerDto: CreateCustomerDto) {
-    return 'This action adds a new customer';
+  async create(createCustomerDto: CreateCustomerDto) {
+    return await this.customerRepository.save({
+      name: "John Doe",
+      email: "john.doe@example.com",
+      userId: "1234567890",
+      organizationId: "1234567890",
+    });
   }
 
   findAll() {

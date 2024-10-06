@@ -2,8 +2,10 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { InvoiceService } from './invoice.service';
 import { CreateInvoiceDto } from './dto/create-invoice.dto';
 import { UpdateInvoiceDto } from './dto/update-invoice.dto';
+import { ApiTags } from '@nestjs/swagger';
 
 @Controller('invoice')
+@ApiTags('Invoices')
 export class InvoiceController {
   constructor(private readonly invoiceService: InvoiceService) {}
 
