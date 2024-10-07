@@ -14,4 +14,5 @@ export const envSchema = Joi.object({
   [EnvKeyConstant.POSTGRES_USER]: Joi.string().required(),
   [EnvKeyConstant.POSTGRES_PASSWORD]: Joi.string().required(),
   [EnvKeyConstant.POSTGRES_DB]: Joi.string().required(),
+  [EnvKeyConstant.ENVIRONMENT]: Joi.string().required(),
 });
